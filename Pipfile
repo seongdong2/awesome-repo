@@ -10,10 +10,12 @@ black = "*"
 [packages]
 django = "*"
 pillow = "*"
-django-seed = "*"
+psycopg2 = "*"
+django-seed = "==0.2.2"
+djangorestframework = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
 
 [pipenv]
 allow_prereleases = true
