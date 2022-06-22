@@ -140,3 +140,10 @@ AUTH_USER_MODEL = "users.User"
 # 추후 모델에 primary_key=True 먹여줘야할 듯
  
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+# Django Rest Framework
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
