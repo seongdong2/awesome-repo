@@ -138,12 +138,16 @@ AUTH_USER_MODEL = "users.User"
 # 아래 내용 지우면 DEFAULT_AUTO_FIELD 오류 발생함!
 # pk가 없이 생성된 객체들에게 자동으로 pk 먹이는 것이라고 함.
 # 추후 모델에 primary_key=True 먹여줘야할 듯
- 
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Django Rest Framework
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "config.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
 }

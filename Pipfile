@@ -13,6 +13,7 @@ pillow = "*"
 psycopg2 = "*"
 django-seed = "==0.2.2"
 djangorestframework = "*"
+pyjwt = "*"
 
 [requires]
 python_version = "3.8"
